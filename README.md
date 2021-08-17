@@ -1,2 +1,2 @@
 # dot-files
-- some configs
+- configs
