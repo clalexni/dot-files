@@ -5,6 +5,15 @@ autocmd Filetype java setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 set nocompatible
 
+"auto match closing paran, braces...
+inoremap ( ()<Esc>i
+inoremap { {}<Esc>i
+inoremap {<CR> {<CR>}<Esc>O
+inoremap [ []<Esc>i
+inoremap < <><Esc>i
+inoremap ' ''<Esc>i
+inoremap " ""<Esc>i
+
 "turn off error bell sound
 set noerrorbells
 set visualbell
