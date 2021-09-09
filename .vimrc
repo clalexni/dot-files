@@ -1,35 +1,23 @@
 syntax on
+filetype plugin indent on
 
-"java indentation
-autocmd Filetype java setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
-
+" turns off vi compatibility
 set nocompatible
-
-"auto match closing paran, braces...
-inoremap ( ()<Esc>i
-inoremap { {}<Esc>i
-inoremap {<CR> {<CR>}<Esc>O
-inoremap [ []<Esc>i
-inoremap < <><Esc>i
-inoremap ' ''<Esc>i
-inoremap " ""<Esc>i
 
 "turn off error bell sound
 set noerrorbells
 set visualbell
-:set t_vb=
+set t_vb=
 
 "color scheme
 colorscheme peachpuff
 highlight Comment ctermfg=green
 
-"default indentation for python
+"tabs/default indentation
 set tabstop=2
 set shiftwidth=2
-"set softtabstop=2
 set expandtab
 set autoindent
-"set si
 
 "searching
 set ignorecase      " Do case insensitive matching
@@ -38,31 +26,40 @@ set incsearch       " Incremental search
 set hlsearch        " Highlight searches
 set showmatch       " Show matching parentheses
 
-"standard stuff
-set ruler
-set number
-"set nowrap
+" Change highlighted text to be black in case the text has the same color as
+" the highlighter
+hi Search ctermfg=Black
 
-"no backups
+" navigation
+set ruler           " show x, y position in status bar
+set number
+set mouse+=a        " enable mouse in all modes. for instance: copy paste with mouse without copying the line number
+set scrolloff=5     " Keep at least 5 lines above/below cursor
+
+" backups
 set noswapfile
 set nobackup
 
-"java print line short cut 
+"java tabs/indentation
+autocmd Filetype java setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+
+"java print line short cut by typing
 imap sout<Tab> System.out.println("");<Left><Left><Left>
 
-"copy paste with mouse without copying the line number
-se mouse+=a
-
-"more navigation
-"set nu              " Set line numbering
-"set scrolloff=5     " Keep at least 5 lines above/below cursor
-"set mousehide       " Hide the mouse when typing
-
-"copy with control-c to system clipboard
+" copy with control-c to system clipboard
+" btw, remember u is undo and control-r is redo
 vnoremap <C-c> :w !pbcopy<CR><CR> 
 
-"btw, remember u is undo and control-r is redo
-set backspace=indent,eol,start
+"auto match closing paran, braces...
+"inoremap ( ()<Esc>i
+inoremap { {}<Esc>i
+inoremap {<CR> {<CR>}<Esc>O
+"inoremap [ []<Esc>i
+"inoremap < <><Esc>i
+"inoremap ' ''<Esc>i
+"inoremap " ""<Esc>i
+
+"set backspace=indent,eol,start
 
 
 
