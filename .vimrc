@@ -59,7 +59,7 @@ inoremap {<CR> {<CR>}<Esc>O
 "inoremap ' ''<Esc>i
 "inoremap " ""<Esc>i
 
-"set backspace=indent,eol,start
+set backspace=indent,eol,start
 
 
 
