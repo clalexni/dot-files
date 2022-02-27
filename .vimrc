@@ -1,5 +1,5 @@
 syntax on
-filetype plugin indent on
+"filetype plugin indent on
 
 " turns off vi compatibility
 set nocompatible
@@ -41,10 +41,10 @@ set noswapfile
 set nobackup
 
 "java tabs/indentation
-autocmd Filetype java setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+"autocmd Filetype java setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 "java print line short cut by typing
-imap sout<Tab> System.out.println("");<Left><Left><Left>
+imap sout<Tab> System.out.println();<Left><Left>
 
 " copy with control-c to system clipboard
 " btw, remember u is undo and control-r is redo
@@ -52,7 +52,7 @@ vnoremap <C-c> :w !pbcopy<CR><CR>
 
 "auto match closing paran, braces...
 "inoremap ( ()<Esc>i
-inoremap { {}<Esc>i
+"inoremap { {}<Esc>i
 inoremap {<CR> {<CR>}<Esc>O
 "inoremap [ []<Esc>i
 "inoremap < <><Esc>i
