@@ -1,3 +1,8 @@
+"width
+set textwidth=80
+set colorcolumn=80
+"set nowrap
+
 syntax on
 "filetype plugin indent on
 
@@ -10,8 +15,11 @@ set visualbell
 set t_vb=
 
 "color scheme
-colorscheme peachpuff
-highlight Comment ctermfg=green
+"colorscheme peachpuff
+"highlight Comment ctermfg=green
+set t_Co=256
+set t_ut=
+colorscheme codedark
 
 "tabs/default indentation
 set tabstop=2
@@ -56,8 +64,8 @@ vnoremap <C-c> :w !pbcopy<CR><CR>
 inoremap {<CR> {<CR>}<Esc>O
 "inoremap [ []<Esc>i
 "inoremap < <><Esc>i
-"inoremap ' ''<Esc>i
-"inoremap " ""<Esc>i
+""inoremap ' ''<Esc>i
+""inoremap " ""<Esc>i
 
 set backspace=indent,eol,start
 
