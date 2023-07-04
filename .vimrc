@@ -53,7 +53,8 @@ imap sout<Tab> System.out.println();<Left><Left>
 
 " copy with control-c to system clipboard
 " btw, remember u is undo and control-r is redo
-vnoremap <C-c> :w !pbcopy<CR><CR> 
+" type "+y to yank/copy to system clipboard instead
+" vnoremap <C-c> :w !pbcopy<CR><CR> 
 
 "auto match closing paran, braces...
 "inoremap ( ()<Esc>i
