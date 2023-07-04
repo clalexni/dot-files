@@ -17,6 +17,8 @@ export NVM_DIR="$HOME/.nvm"
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-#mysql -u root -p
+# mysql -u root -p
 export PATH="$PATH:/usr/local/mysql/bin"
 
+# tmux
+export PATH="$PATH:/opt/homebrew/bin"
