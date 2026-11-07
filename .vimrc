@@ -1,73 +1,52 @@
-"width
-set textwidth=80
-"set colorcolumn=80
-"set nowrap
-
-syntax on
-"filetype plugin indent on
-
-" turns off vi compatibility
+" General
 set nocompatible
+syntax on
+filetype plugin indent on
 
-"turn off error bell sound
+" Appearance
+colorscheme peachpuff
+highlight Comment ctermfg=green
+set number
+set ruler
+set scrolloff=5
+set showmatch
+
+" Text formatting
+set nowrap
+set colorcolumn=80
+" set textwidth=80
+
+" Indentation
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set autoindent
+
+" Search
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+highlight Search ctermfg=Black
+
+" Navigation
+set mouse=a
+set backspace=indent,eol,start
+
+" Clipboard (requires Vim compiled with +clipboard)
+if has('clipboard')
+  set clipboard=unnamedplus
+endif
+
+" Disable bells
 set noerrorbells
 set visualbell
 set t_vb=
 
-"color scheme
-colorscheme peachpuff 
-highlight Comment ctermfg=green
-
-"tabs/default indentation
-set tabstop=2
-set shiftwidth=2
-set expandtab
-set autoindent
-
-"searching
-set ignorecase      " Do case insensitive matching
-set smartcase       " Unless you explicitly search for upper case
-set incsearch       " Incremental search
-set hlsearch        " Highlight searches
-set showmatch       " Show matching parentheses
-
-" Change highlighted text to be black in case the text has the same color as
-" the highlighter
-hi Search ctermfg=Black
-
-" navigation
-set ruler           " show x, y position in status bar
-set number
-set mouse+=a        " enable mouse in all modes. for instance: copy paste with mouse without copying the line number
-set scrolloff=5     " Keep at least 5 lines above/below cursor
-
-" backups
+" Files
 set noswapfile
 set nobackup
 
-"java tabs/indentation
-"autocmd Filetype java setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
-
-"java print line short cut by typing
-imap sout<Tab> System.out.println();<Left><Left>
-
-" copy with control-c to system clipboard
-" btw, remember u is undo and control-r is redo
-" type "+y to yank/copy to system clipboard instead
-" vnoremap <C-c> :w !pbcopy<CR><CR> 
-
-"auto match closing paran, braces...
-"inoremap ( ()<Esc>i
-"inoremap { {}<Esc>i
-inoremap {<CR> {<CR>}<Esc>O
-"inoremap [ []<Esc>i
-"inoremap < <><Esc>i
-""inoremap ' ''<Esc>i
-""inoremap " ""<Esc>i
-
-set backspace=indent,eol,start
-
-
-
-
-
+" Shortcuts
+inoremap sout<Tab> System.out.println();<Left><Left>
